@@ -37,7 +37,7 @@ resource "aws_security_group" "mysql" {
 
 
   dynamic "ingress" {
-    for_each = ["3306", "33060"]
+    for_each = ["3306", "33060", "22"]
     content {
       from_port = ingress.value
       to_port = ingress.value
